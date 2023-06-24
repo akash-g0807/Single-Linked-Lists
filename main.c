@@ -132,6 +132,7 @@ void Delete_Front(struct node** head_ptr){
     // Check if linked list is empty
     if((*head_ptr) == NULL){
         printf("Linked list is empty\n");
+        return;
     }
 
     // Store the head node
@@ -150,6 +151,7 @@ void Delete_End(struct node** head_ptr){
     // Check if linked list is empty
     if((*head_ptr) == NULL){
         printf("Linked list is empty\n");
+        return;
     }
 
     // Store the head node
@@ -171,6 +173,7 @@ void Delete_Index(struct node** head_ptr, uint32_t index){
     // Check if linked list is empty
     if((*head_ptr) == NULL){
         printf("Linked list is empty\n");
+        return;
     }
 
     // Store the head node
@@ -194,6 +197,7 @@ void Delete_Value(struct node** head_ptr, int value){
     // Check if linked list is empty
     if((*head_ptr) == NULL){
         printf("Linked list is empty\n");
+        return;
     }
 
     // Store the head node
@@ -258,7 +262,8 @@ int main(){
 
 
 
-    free(head);
+    Delete_List(&head);
+    Delete_Index(&head, 2);
 
     return 0;
 }
